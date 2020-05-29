@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>A small web page</h1>
+
+		<div class="content top">
+			For exploring the DOM.
+		</div>
+		<div class="content top">
+			<h2>Please tell me</h2>
+			<ul>
+				<li>What is the DOM?</li>
+				<li>How do I use it?</li>
+			</ul>
+
+			<h3>What is the DOM?</h3>
+
+			<ul>
+				<li>The DOM is the Document Object Model which is an API for web pages.</li>
+				<li>It allows you to add behaviour (events) to a web page.</li>
+			</ul>			
+
+			<h3>How do I use it?</h3>
+
+			<ul>
+				<li>You use JavaScript in a script tag in your html page,</li>
+				<li>to access the DOM using <i>document</i> object,</li>
+				<li>to get a reference to DOM elements,</li>
+				<li>and then you can add behaviour to the elements or get and set values on the elements.</li>
+			</ul>
+
+			<div class="code">
+				<code>
+					// to get the value of the element
+					<br>
+					const theElement = document.querySelector(".targetElement");
+					<br>
+					console.log(theElement.value);
+	
+					<br>
+					<br>
+					// to set a new value in an element
+					<br>
+					theElement.value = "The new value..."
+	
+					<br>
+					<br>
+					// to add behaviour to a button
+					<br>
+					const theButton = document.querySelector(".targetButton");
+					<br>
+					theButton.addEventListener("click", function() {
+						<br>
+						// do something when the button is clicked
+						<br>
+					});
+				</code>
+			</div>
+		</div>
+
+		<div class="content">
+			<h2>Some input elements</h2>
+			<div class="control topMessage">
+				<div class="theMessage">
+					We will display a message here when the button is pressed...
+				</div>
+			</div>
+			<div class="control topMessage">
+				<label for="theMessage">The name</label>
+				<input type="text" name="name" class="theName" placeholder="Enter your name">
+			</div>
+			<div class="control ">
+				<label for="theDate">The date</label>
+				<input type="date" name="theDate" class="theDate">
+			</div>
+			<div class="control">
+				<label for="theColor">The color</label>
+				<input type="radio" name="theColor" class="theColor" value="orange"> Orange
+				<input type="radio" name="theColor" class="theColor" value="blue"> Blue
+				<input type="radio" name="theColor" class="theColor" value="green"> Green
+			</div>
+			<div class="control">
+				<input type="button" class="theButton" value="Press me!">
+			</div>
+		</div>
+	</div>
+    <script src="the-dom.js"></script>
+</body>
+</html>
