@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+
+    <script class="mocha-init">
+      mocha.setup('bdd');
+	  mocha.checkLeaks();
+	  assert  = chai.assert;
+    </script>
+   <script src= "./factory-functions/bill-with-settings.js"></script>
+   <script src= "./bill-with-settings/bill-with-settings.js"></script>
+
+   <script src= "./factory-functions/calculate-bill.js"></script>
+   <script src= "./calculate-bill/calculate-bill.js"></script>
+
+   <script src= "./factory-functions/radio-button-bill.js"></script>
+   <script src= "./radio-button-bill/radio-button-bill.js"></script>
+
+   <script src= "./factory-functions/text-bill.js"></script>
+   <script src= "./text-bill/text-bill.js"></script>
+
+   <script src= "./factory-functions/the-dom.js"></script>
+   <script src= "./the-dom/the-dom.js"></script>
+    <script class="mocha-exec">
+      mocha.run();
+    </script>
+  </body>
+</html>
