@@ -28,8 +28,8 @@ describe("The bill with settings factory function", function () {
     it("should be able to set sms and call cost", function () {
         let settingsBill = BillWithSettings();
 
-        settingsBill.getCallCost(2.75);
-        settingsBill.getSmsCost(0.85);
+        // settingsBill.getCallCost(2.75);
+        // settingsBill.getSmsCost(0.85);
 
         settingsBill.setSmsCost(0.85);
         settingsBill.setCallCost(2.75);
