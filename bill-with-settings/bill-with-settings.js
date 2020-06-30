@@ -11,14 +11,28 @@ var smsCost = document.querySelector(".smsCostSetting");
 var warningLevel = document.querySelector(".warningLevelSetting");
 var criticalLevel = document.querySelector(".criticalLevelSetting");
 
-var callsTotalOne = 0;
-var smsTotalOne = 0;
-var billTotal = 0;
+const BillWithSettings = BillWithSettings();
 
-var callCostOne = 0;
-var smsCostOne = 0;
-var warning = 0;
-var critical = 0;
+
+function update(){
+ BillWithSettings = setCallCost(Number(callCost.value))
+  BillWithSettings =setSmsCost(Number(smsCost.value))
+ BillWithSettings = setCriticalLevel(Number(criticalLevel.value))
+ BillWithSettings = setWarningLevel(Number(warningLevel.value))
+    color();
+  }
+
+
+
+
+// var callsTotalOne = 0;
+// var smsTotalOne = 0;
+// var billTotal = 0;
+
+// var callCostOne = 0;
+// var smsCostOne = 0;
+// var warning = 0;
+// var critical = 0;
 
 function buttonAddElementClicked(){
 var checkedRadioBtn = document.querySelector("input[name='billItemTypeWithSettings']:checked");
@@ -43,13 +57,13 @@ total.innerHTML = billTotal.toFixed (2);
 }
 }
 
-function buttonSettingsClicked(){
-  callCostOne = Number(callCost.value);
-smsCostOne = Number(smsCost.value);
-critical = Number(criticalLevel.value);
-warning = Number(warningLevel.value);
-  color()
-}
+// function buttonSettingsClicked(){
+//   callCostOne = Number(callCost.value);
+// smsCostOne = Number(smsCost.value);
+// critical = Number(criticalLevel.value);
+// warning = Number(warningLevel.value);
+//   color()
+// }
   
   function color(){
 total.classList.remove("danger");
