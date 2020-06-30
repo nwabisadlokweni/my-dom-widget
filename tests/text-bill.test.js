@@ -6,7 +6,7 @@ describe("The text bill factory function", function () {
         txtBill.setCallCost(2.75);
         assert.equal(2.75, txtBill.getCallCost());
 
-        let txtBill2 = calc();
+        let txtBill2 = textBill();
         txtBill2.setCallCost(1.85);
         assert.equal(1.85, txtBill2.getCallCost());
     })

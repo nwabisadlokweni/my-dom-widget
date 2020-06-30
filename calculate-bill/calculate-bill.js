@@ -6,31 +6,31 @@ const billStringField = document.querySelector(".billString");
 
 const billTotalSpanElement = document.querySelector(".total");
 
-function totalPhoneBill(billString) {
+// function totalPhoneBill(billString) {
 
-var billItems = billString.split(",");
+// var billItems = billString.split(",");
 
-var billTotal = 0;
+// var billTotal = 0;
 
-for (var i=0;i<billItems.length;i++){
-var billItem = billItems[i].trim();
+// for (var i=0;i<billItems.length;i++){
+// var billItem = billItems[i].trim();
 
-if (billItem === "call"){
-billTotal += 2.75;
-}
+// if (billItem === "call"){
+// billTotal += 2.75;
+// }
 
-else if (billItem === "sms"){ 
-billTotal += 0.75;
-}
+// else if (billItem === "sms"){ 
+// billTotal += 0.75;
+// }
 
-}
+// }
 
-var roundedBillTotal = billTotal.toFixed(2);
-return roundedBillTotal;
-}
+
+// }
 
 function styleTotalColor(roundedBillTotal) {
-
+    // var roundedBillTotal = billTotal.toFixed(2);
+    // return roundedBillTotal;
 const currentTotal = Number(roundedBillTotal);
 
 billTotalSpanElement.classList.remove("danger");
@@ -47,6 +47,7 @@ billTotalSpanElement.classList.add("warning");
 function calculateBtnClicked() {
 
 var billString = billStringField.value;
+// var billValue = totalPhoneBill(billStringField)
 
 const roundedBillTotal = totalPhoneBill(billString);
 
