@@ -1,63 +1,60 @@
-const calculateBtn = document.querySelector(".calculateBtn");
-
-const billTotalElement = document.querySelector(".billTotal");
-
+const calculateBtn = document.querySelector (".calculateBtn");
+const billTotalElement = document.querySelector (".billTotal");
 const billStringField = document.querySelector(".billString");
-
-const billTotalSpanElement = document.querySelector(".total");
-
-// function totalPhoneBill(billString) {
-
-// var billItems = billString.split(",");
-
-// var billTotal = 0;
-
-// for (var i=0;i<billItems.length;i++){
-// var billItem = billItems[i].trim();
-
-// if (billItem === "call"){
-// billTotal += 2.75;
-// }
-
-// else if (billItem === "sms"){ 
-// billTotal += 0.75;
-// }
-
-// }
+const billTotalSpanElement = document.querySelector (".total");
 
 
-// }
+function totalPhoneBill(billString) {
 
-function styleTotalColor(roundedBillTotal) {
-    // var roundedBillTotal = billTotal.toFixed(2);
-    // return roundedBillTotal;
-const currentTotal = Number(roundedBillTotal);
+var billItems = billString.split(",");
+var billTotal = 0;
 
-billTotalSpanElement.classList.remove("danger");
-billTotalSpanElement.classList.remove("warning");
+for (var i=0;i<billItems.length;i++){
+var billItem = billItems[i].trim ();
 
-if (currentTotal >= 30) {
-billTotalSpanElement.classList.add("danger");
-}
-else if (currentTotal >= 20 && currentTotal < 30) {
-billTotalSpanElement.classList.add("warning");
-}
+if (billItem === "call"){
+billTotal += 2.75;
 }
 
-function calculateBtnClicked() {
+else if (billItem === "sms"){
+billTotal += 0.75;
+
+}
+
+}
+
+var roundedBillTotal = billTotal.toFixed(2);
+return roundedBillTotal;
+
+}
+
+
+function styleTotalColor (roundedBillTotal) {
+const currentTotal = Number (roundedBillTotal);
+
+billTotalSpanElement.classList.remove ("danger");
+billTotalSpanElement.classList.remove ("warning");
+
+if (currentTotal >= 30 ) {
+billTotalSpanElement.classList.add ("danger");
+
+
+} else if (currentTotal >= 20 && currentTotal < 30 ) {
+billTotalSpanElement.classList.add ("warning");
+
+}
+}
+
+
+function calculateBtnClicked(){
 
 var billString = billStringField.value;
-// var billValue = totalPhoneBill(billStringField)
-
-const roundedBillTotal = totalPhoneBill(billString);
+const roundedBillTotal = totalPhoneBill (billString);
 
 
 
 billTotalElement.innerHTML = roundedBillTotal;
-
-styleTotalColor(roundedBillTotal);
-
+styleTotalColor (roundedBillTotal);
 }
 
-
-calculateBtn.addEventListener("click", calculateBtnClicked);
+calculateBtn.addEventListener ("click", calculateBtnClicked);

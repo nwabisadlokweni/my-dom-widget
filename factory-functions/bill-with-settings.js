@@ -1,6 +1,7 @@
 function BillWithSettings() {
     var theCallCost = 0;
     var theSmsCost = 0;
+    
     var theWarningLevel = 0;
     var theCriticalLevel = 0;
 

@@ -214,7 +214,7 @@ describe("warning & danger level", function () {
         radioBtn.sendSms();
         radioBtn.sendSms();
         radioBtn.sendSms();
-        radioBtn.sendSms();
+        radioBtn.sendSms();                                                                                     
         radioBtn.sendSms();
         radioBtn.sendSms();
         radioBtn.sendSms();
