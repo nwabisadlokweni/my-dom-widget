@@ -1,5 +1,4 @@
 function radioBill() {
-
     var theCallCost = 0;
     var theSmsCost = 0;
     var theWarningLevel = 0;

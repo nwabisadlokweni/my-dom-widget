@@ -11,19 +11,7 @@ var smsCost = document.querySelector(".smsCostSetting");
 var warningLevel = document.querySelector(".warningLevelSetting");
 var criticalLevel = document.querySelector(".criticalLevelSetting");
 
-// const BillWithSettings = BillWithSettings();
-
-
-// function update(){
-//  BillWithSettings = setCallCost(Number(callCost.value))
-//   BillWithSettings =setSmsCost(Number(smsCost.value))
-//  BillWithSettings = setCriticalLevel(Number(criticalLevel.value))
-//  BillWithSettings = setWarningLevel(Number(warningLevel.value))
-//     color();
-//   }
-
-
-
+const SettingsBill = BillWithSettings();
 
 var callsTotalOne = 0;
 var smsTotalOne = 0;
